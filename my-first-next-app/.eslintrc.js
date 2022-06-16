@@ -23,7 +23,7 @@ module.exports = {
     "react/no-array-index-key": "off", // key값으로 index를 사용할수 있다.
     "comma-dangle": "off", // 마지막에 , 을 넣어주지 않는다.
     "arrow-body-style": "off", // 화살표 함수 안에 return을 사용 할 수 있다.
-    "react/no-unescaped-entities": "off", // 문자열 내에서 " ' > } 허용
+    "react/no-unescaped-entities": "on", // 문자열 내에서 " ' > } 허용
     "react/prop-types": "off", // proptypes를 사용하지 않는다.
     "object-curly-newline": "off", // { 다음 줄 바꿈을 강제로 사용하지 않는다.
     "react/jsx-one-expression-per-line": "off", // 한라인에 여러개의 JSX를 사용 할 수 있다.
