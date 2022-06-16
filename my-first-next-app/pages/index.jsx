@@ -19,6 +19,9 @@ const App = () => {
       <button type="button" onClick={() => router.push(`/vegetable/${name}`)}>
         Move to {name}
       </button>
+      <button type="button" onClick={() => router.push("/vegetable/carrot")}>
+        Move to Carrot
+      </button>
     </div>
   );
 };
