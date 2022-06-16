@@ -1,22 +1,23 @@
-import fetch from 'isomorphic-unfetch';
+import React, { useState } from 'react';
+import Link from 'next/link';
 
-const index = ({ user }) => {
-  const username = user && user.name;
-  return <div>{username} Hello</div>
+const App = () => {
+  const [username, setUsername] = useState();
+  return (
+    <div>
+      <label>
+        username
+        <input 
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+      </label>
+      <p>{username} github Search</p>
+      <Link href={`/users/${username}`}>
+        Search
+      </Link>
+    </div>
+  );
 };
 
-export const getServerSideProps = async () => {
-  try {
-    const res = await fetch("https://api.github.com/users/jerrynim");
-    if (res.status === 200) {
-      const user = await res.json();
-      return { props: { user } };
-    }
-    return { props: {} };
-  } catch (e) {
-    console.log(e);
-    return { props: {} };
-  }
-};
-
-export default index;
+export default App;
