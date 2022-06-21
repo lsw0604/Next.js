@@ -15,7 +15,6 @@ export const getStaticProps = async ({ params }) => {
     const res = await fetch(`https://api.github.com/users/${params.name}`);
     const user = await res.json();
     if (res.status === 200) {
-      const user = await res.json();
       return { props: { user, time: new Date().toISOString() } };
     }
     return { props: { time: new Date().toISOString() } };
