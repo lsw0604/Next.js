@@ -14,7 +14,7 @@ const App = () => {
       </label>
       <p>{username} github Search</p>
       <Link href={`/users/${username}`}>
-        Search
+        <a>Search</a>
       </Link>
     </div>
   );

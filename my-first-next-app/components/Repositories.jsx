@@ -1,5 +1,5 @@
-import { useRouter } from "next/router";
 import css from "styled-jsx/css";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import formatDistance from "date-fns/formatDistance";
 
@@ -14,7 +14,7 @@ const style = css`
     padding: 16px 0;
     font-size: 14px;
     font-weight: 600;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #e1e4e8;
   }
   .repos-count {
     display: inline-block;
@@ -29,7 +29,7 @@ const style = css`
   }
   .repository-wrapper {
     width: 100%;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #e1e4e8;
     padding: 24px 0;
   }
   .repository-description {
@@ -142,8 +142,7 @@ const Repositories = ({ user, repos }) => {
       </div>
       <style jsx>{style}</style>
     </div>
-  )
-
+  );
 };
 
 export default Repositories;
